@@ -5,10 +5,10 @@
       <nav style="--bs-breadcrumb-divider: '>';" aria-label="索引列">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="./index.html" class="link-dark text-decoration-none">首頁</a>
+            首頁
           </li>
           <li class="breadcrumb-item">
-            <a href="./cart.html" class="link-dark text-decoration-none">購物車確認</a>
+            購物車確認
           </li>
           <li class="breadcrumb-item active" aria-current="page">填寫資料</li>
         </ol>
@@ -49,22 +49,6 @@
             <input type="text" id="inputUserEmail" class="form-control">
           </div>
         </div>
-        <div class="col-6">
-          <div class="input-group">
-            <label for="inputUserCitys" class="input-group-text">縣市</label>
-            <select id="inputUserCitys" class="form-select">
-              <option value="" disabled>請選擇縣市</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-6 mb-3">
-          <div class="input-group">
-            <label for="inputUserDistrict" class="input-group-text">區域</label>
-            <select id="inputUserDistrict" class="form-select">
-              <option value="" disabled>請選擇區域</option>
-            </select>
-          </div>
-        </div>
         <div class="mb-3">
           <div class="input-group">
             <label for="inputUserPosition" class="input-group-text">地址</label>
@@ -75,10 +59,10 @@
           <label for="inputMessages" class="form-label">留言</label>
           <textarea type="text" id="inputMessages" class="form-control"></textarea>
         </div>
+        <div class="mb-3 text-center">
+          <router-link class="btn btn-secondary" to="cartcheck">確認資料並送出</router-link>
+        </div>
       </form>
-      <div class="mb-3 text-center">
-        <a href="./cartCheck.html" class="btn btn-secondary">確認資料並送出</a>
-      </div>
     </div>
   </main>
 </template>

@@ -5,7 +5,7 @@
       <nav style="--bs-breadcrumb-divider: '>';" aria-label="索引列">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="./index.html" class="link-dark text-decoration-none">首頁</a>
+            首頁
           </li>
           <li class="breadcrumb-item active" aria-current="page">購物車確認</li>
         </ol>
@@ -38,7 +38,7 @@
                 <div class="col-lg-5">
                   星杯物語
                 </div>
-                <div class="col-7">
+                <div class="col-lg-7">
                   <div class="mb-3 text-end">
                     <button type="button" class="btn btn-outline-danger">刪除</button>
                   </div>
@@ -181,7 +181,7 @@
             </div>
           </div>
           <div class="text-center">
-            <a href="./cartForm.html" class="btn btn-secondary">前往結帳</a>
+            <router-link class="btn btn-secondary" to="cartform">前往結帳</router-link>
           </div>
         </div>
       </div>
@@ -192,6 +192,11 @@
 <script>
 export default {
   methods: {
+    data() {
+      return {
+        product: [],
+      };
+    },
     getCarts() {
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`;
       this.$http.get(url).then((response) => {

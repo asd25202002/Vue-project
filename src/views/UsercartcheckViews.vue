@@ -5,13 +5,13 @@
       <nav style="--bs-breadcrumb-divider: '>';" aria-label="索引列">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="./index.html" class="link-dark text-decoration-none">首頁</a>
+            首頁
           </li>
           <li class="breadcrumb-item">
-            <a href="./cart.html" class="link-dark text-decoration-none">購物車確認</a>
+            購物車確認
           </li>
           <li class="breadcrumb-item">
-            <a href="./cartForm.html" class="link-dark text-decoration-none">填寫資料</a>
+            填寫資料
           </li>
           <li class="breadcrumb-item active" aria-current="page">資料確認</li>
         </ol>
@@ -80,7 +80,7 @@
         </div>
       </form>
       <div class="mb-3 text-center">
-        <a href="./cartDone.html" class="btn btn-secondary">完成購物並付款</a>
+        <router-link class="btn btn-secondary" to="cartdone">完成購物並付款</router-link>
       </div>
     </div>
   </main>

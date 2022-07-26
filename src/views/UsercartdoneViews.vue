@@ -5,16 +5,16 @@
       <nav style="--bs-breadcrumb-divider: '>';" aria-label="索引列">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="./index.html" class="link-dark text-decoration-none">首頁</a>
+            首頁
           </li>
           <li class="breadcrumb-item">
-            <a href="./cart.html" class="link-dark text-decoration-none">購物車確認</a>
+            購物車確認
           </li>
           <li class="breadcrumb-item">
-            <a href="./cartForm.html" class="link-dark text-decoration-none">填寫資料</a>
+            填寫資料
           </li>
           <li class="breadcrumb-item">
-            <a href="./cartCheck.html" class="link-dark text-decoration-none">資料確認</a>
+            資料確認
           </li>
           <li class="breadcrumb-item active" aria-current="page">購物完成</li>
         </ol>
@@ -38,7 +38,6 @@
       <div class="card mb-3 text-center">
         <div class="card-body">
           <p class="card-text fs-1"><strong>您已購買成功，可以繼續購物！</strong></p>
-          <a href="./index.html" class="btn btn-secondary">繼續購物</a>
         </div>
       </div>
       <div class="mb-3 fs-3"><strong>你可能也會喜歡....</strong></div>
