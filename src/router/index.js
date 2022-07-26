@@ -42,11 +42,6 @@ const routes = [
         component: () => import('../views/UsercartdoneViews.vue'),
       },
       {
-        path: 'about',
-        name: 'about',
-        component: () => import('../views/UseraboutViews.vue'),
-      },
-      {
         path: 'contact',
         name: 'contact',
         component: () => import('../views/UsercontactViews.vue'),

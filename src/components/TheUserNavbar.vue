@@ -36,17 +36,10 @@
         to="/userboard/cart">
           <i class="bi bi-cart" style="font-size: 1.5rem;"></i>
           <span class="position-absolute start-100 translate-middle
-          badge rounded-pill bg-secondary navbarIconBtn">
-            1
+          badge rounded-pill bg-secondary navbarIconBtn" v-if="carts.carts">
+            {{ carts.carts.length ? carts.carts.length : '' }}
           </span>
         </router-link>
-        <a class="btn border-0 position-relative p-0 me-3 icon--hover" href="#">
-          <i class="bi bi-heart" style="font-size: 1.5rem;"></i>
-          <span class="position-absolute start-100 translate-middle
-          badge rounded-pill bg-secondary navbarIconBtn">
-            1
-          </span>
-        </a>
       </div>
     </div>
   </nav>
@@ -59,7 +52,21 @@ export default {
   data() {
     return {
       offcanvas: {},
+      carts: [],
     };
+  },
+  inject: ['emitter'],
+  methods: {
+    getCart() {
+      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`;
+      this.$http.get(url).then((response) => {
+        this.carts = response.data.data;
+      });
+    },
+  },
+  mounted() {
+    this.getCart();
+    this.emitter.on('update-cart', this.getCart);
   },
   mixins: [offcanvasMixin],
 };

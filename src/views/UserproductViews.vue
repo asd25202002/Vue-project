@@ -15,7 +15,7 @@
       </nav>
       <div class="row">
         <div class="col-lg-6">
-          <img :src="product.imageUrl" alt="星杯物語" class="img-fluid">
+          <img :src="product.imageUrl" :alt="product.title" class="img-fluid">
         </div>
         <div class="col-lg-6">
           <p class="fs-3">{{ product.title }}</p>
@@ -26,10 +26,6 @@
             @click.prevent="addCart(product.id)">
               <i class="bi bi-cart"></i>
               加入購物車
-            </button>
-            <button type="button" class="btn btn-outline-danger">
-              <i class="bi bi-heart"></i>
-              加入願望清單
             </button>
           </div>
         </div>
@@ -96,6 +92,7 @@ export default {
       page: '產品描述',
     };
   },
+  inject: ['emitter', 'toastMessagesMixin'],
   methods: {
     getProducts() {
       // 產品重新載入
@@ -127,10 +124,10 @@ export default {
         qty: 1,
       };
       this.$http.post(url, { data: cart }).then((response) => {
-        console.log(response);
         this.isLoading = false;
         if (response.data.success) {
-          this.product = response.data.product;
+          this.emitter.emit('update-cart');
+          this.toastMessagesMixin(response, '加入購物車');
         }
       });
     },

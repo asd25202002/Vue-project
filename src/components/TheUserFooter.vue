@@ -10,25 +10,25 @@
       </div>
       <ul class="row row-cols-4 justify-content-center list-unstyled">
         <li class="col">
-          <router-link class="link-light text-decoration-none icon--hover" to="home">
+          <router-link class="link-light text-decoration-none icon--hover" :to="{ name: 'home' }">
             <i class="bi bi-line fs-1"></i>
             <p class="text-white d-none d-md-block">LINE</p>
           </router-link>
         </li>
         <li class="col">
-          <router-link class="link-light text-decoration-none icon--hover" to="home">
+          <router-link class="link-light text-decoration-none icon--hover" :to="{ name: 'home' }">
             <i class="bi bi-facebook fs-1"></i>
             <p class="text-white d-none d-md-block">Facebook</p>
           </router-link>
         </li>
         <li class="col">
-          <router-link class="link-light text-decoration-none icon--hover" to="home">
+          <router-link class="link-light text-decoration-none icon--hover" :to="{ name: 'home' }">
             <i class="bi bi-instagram fs-1"></i>
             <p class="text-white d-none d-md-block">Instagram</p>
           </router-link>
         </li>
         <li class="col">
-          <router-link class="link-light text-decoration-none icon--hover" to="home">
+          <router-link class="link-light text-decoration-none icon--hover" :to="{ name: 'home' }">
             <i class="bi bi-twitter fs-1"></i>
             <p class="text-white d-none d-md-block">Twitter</p>
           </router-link>
@@ -37,25 +37,25 @@
       <ul class="row row-cols-2 row-cols-lg-4 g-2 justify-content-center list-unstyled">
         <li class="col">
           <router-link
-          class="link-light text-decoration-none moreMenu__link--hover" to="about">
+          class="link-light text-decoration-none moreMenu__link--hover" :to="{ name: 'home' }">
             關於我們
           </router-link>
         </li>
         <li class="col">
           <router-link
-          class="link-light text-decoration-none moreMenu__link--hover" to="home">
+          class="link-light text-decoration-none moreMenu__link--hover" :to="{ name: 'home' }">
             利用規範
           </router-link>
         </li>
         <li class="col">
           <router-link
-          class="link-light text-decoration-none moreMenu__link--hover" to="contact">
+          class="link-light text-decoration-none moreMenu__link--hover" :to="{ name: 'contact' }">
             聯絡我們
           </router-link>
         </li>
         <li class="col">
           <router-link
-          class="link-light text-decoration-none moreMenu__link--hover" to="login">
+          class="link-light text-decoration-none moreMenu__link--hover" :to="{ name: 'login' }">
             後台登入
           </router-link>
         </li>
