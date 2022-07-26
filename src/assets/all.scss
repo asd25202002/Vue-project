@@ -1,0 +1,86 @@
+@import "~bootstrap/scss/functions";
+@import "./helpers/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+
+@import "~bootstrap/scss/bootstrap";
+
+// userboard
+* {
+  font-family: Microsoft JhengHei;
+}
+/* header */
+.logo--hover:hover,
+.icon--hover:hover,
+.moreMenu__link--hover:hover,
+.categoryImgMenu__item--hover:hover,
+.productMenu__item--hover:hover,
+.contact__item--hover:hover {
+  opacity: .7;
+  cursor: pointer;
+}
+.bg-mark {
+  background-color: gray;
+}
+
+/* footer */
+.logo {
+  text-decoration: none;
+  font-family: 'Edu TAS Beginner', cursive;
+}
+
+/* banner */
+.banner {
+  background: url(https://images.unsplash.com/photo-1656608527574-32381b560ca0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 920px;
+}
+.slogan {
+  text-shadow: 0 0 0.2em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+}
+/* main */
+.searchBtn,.categoryBtn {
+  right: 1px;
+}
+.navbarIconBtn {
+  top: 5px !important;
+}
+.bg-categoryTitle,.progressMenu__itme--active {
+  background-color: #454545;
+}
+.categoryMeun__item--active,.categoryMeun__item--hover:hover {
+  opacity: .7;
+  background-color: #e2e2e2;
+}
+.logo,.cart {
+  max-width: 400px;
+}
+.progressMenu__itme--active::after {
+  content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	right: -40px;
+	border: transparent 20px solid;
+	border-left: #454545 20px solid;
+}
+.progressMenu__itme--active::before {
+  content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: transparent 20px solid;
+	border-left: white 20px solid;
+}
+.cartImg-size {
+  width: 100px;
+}
+.productImg-size {
+  width: 190px;
+  height: 253px;
+}
