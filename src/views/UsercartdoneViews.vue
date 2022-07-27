@@ -37,78 +37,11 @@
       </div>
       <div class="card mb-3 text-center">
         <div class="card-body">
+          <p class="card-text fs-1"><strong>謝謝您的光臨</strong></p>
           <p class="card-text fs-1"><strong>您已購買成功，可以繼續購物！</strong></p>
+          <router-link class="btn btn-secondary" :to="{ name: 'home' }">回首頁</router-link>
         </div>
       </div>
-      <div class="mb-3 fs-3"><strong>你可能也會喜歡....</strong></div>
-      <ul class="row g-4 p-0 list-unstyled">
-        <li class="col-md-6 col-lg-3 border-0 productMenu__item--hover">
-          <div class="card">
-            <img src="http://www.bgleisure.com/archive/image/product2/images/1550895756.jpg" alt="星杯物語" class="img-fluid mx-auto">
-            <div class="card-body">
-              <p class="card-text">星杯物語</p>
-              <p class="card-text">遊戲人數：2人</p>
-              <p class="card-text">遊玩時間：約40分</p>
-              <p class="card-text">NT<i class="fa-solid fa-dollar-sign"></i>1,280</p>
-            </div>
-          </div>
-        </li>
-        <li class="col-md-6 col-lg-3 border-0 productMenu__item--hover">
-          <div class="card">
-            <img src="http://www.bgleisure.com/archive/image/product2/images/1550895756.jpg" alt="星杯物語" class="img-fluid mx-auto">
-            <div class="card-body">
-              <p class="card-text">星杯物語</p>
-              <p class="card-text">遊戲人數：2人</p>
-              <p class="card-text">遊玩時間：約40分</p>
-              <p class="card-text">NT<i class="fa-solid fa-dollar-sign"></i>1,280</p>
-            </div>
-          </div>
-        </li>
-        <li class="col-md-6 col-lg-3 border-0 productMenu__item--hover">
-          <div class="card">
-            <img src="http://www.bgleisure.com/archive/image/product2/images/1550895756.jpg" alt="星杯物語" class="img-fluid mx-auto">
-            <div class="card-body">
-              <p class="card-text">星杯物語</p>
-              <p class="card-text">遊戲人數：2人</p>
-              <p class="card-text">遊玩時間：約40分</p>
-              <p class="card-text">NT<i class="fa-solid fa-dollar-sign"></i>1,280</p>
-            </div>
-          </div>
-        </li>
-        <li class="col-md-6 col-lg-3 border-0 productMenu__item--hover">
-          <div class="card">
-            <img src="http://www.bgleisure.com/archive/image/product2/images/1550895756.jpg" alt="星杯物語" class="img-fluid mx-auto">
-            <div class="card-body">
-              <p class="card-text">星杯物語</p>
-              <p class="card-text">遊戲人數：2人</p>
-              <p class="card-text">遊玩時間：約40分</p>
-              <p class="card-text">NT<i class="fa-solid fa-dollar-sign"></i>1,280</p>
-            </div>
-          </div>
-        </li>
-        <li class="col-md-6 col-lg-3 border-0 productMenu__item--hover">
-          <div class="card">
-            <img src="http://www.bgleisure.com/archive/image/product2/images/1550895756.jpg" alt="星杯物語" class="img-fluid mx-auto">
-            <div class="card-body">
-              <p class="card-text">星杯物語</p>
-              <p class="card-text">遊戲人數：2人</p>
-              <p class="card-text">遊玩時間：約40分</p>
-              <p class="card-text">NT<i class="fa-solid fa-dollar-sign"></i>1,280</p>
-            </div>
-          </div>
-        </li>
-        <li class="col-md-6 col-lg-3 border-0 productMenu__item--hover">
-          <div class="card">
-            <img src="http://www.bgleisure.com/archive/image/product2/images/1550895756.jpg" alt="星杯物語" class="img-fluid mx-auto">
-            <div class="card-body">
-              <p class="card-text">星杯物語</p>
-              <p class="card-text">遊戲人數：2人</p>
-              <p class="card-text">遊玩時間：約40分</p>
-              <p class="card-text">NT<i class="fa-solid fa-dollar-sign"></i>1,280</p>
-            </div>
-          </div>
-        </li>
-      </ul>
     </div>
   </main>
 </template>

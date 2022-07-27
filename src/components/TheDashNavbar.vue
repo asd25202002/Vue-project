@@ -19,13 +19,13 @@
           <ul class="navbar-nav">
           <li class="nav-item">
             <router-link class="nav-link link-white"
-            to="dashproduct">產品</router-link>
+            :to="{ name: dashproduct}">產品</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link link-white" to="order">訂單</router-link>
+            <router-link class="nav-link link-white" :to="{ name: 'order'}">訂單</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link link-white" to="coupon">優惠卷</router-link>
+            <router-link class="nav-link link-white" :to="{ name: 'coupon'}">優惠卷</router-link>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" @click.prevent="logout">登出</a>

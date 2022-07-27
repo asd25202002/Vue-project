@@ -77,6 +77,7 @@ export default {
     DelModal,
     OrderModal,
   },
+  inject: ['toastMessagesMixin'],
   methods: {
     getOrders(currentPage = 1) {
       this.currentPage = currentPage;
@@ -109,14 +110,14 @@ export default {
       this.$http.put(api, { data: paid }).then((response) => {
         this.isLoading = false;
         this.getOrders(this.currentPage);
-        this.$httpMessageState(response, '更新付款狀態');
+        this.toastMessagesMixin(response, '更新付款狀態');
       });
     },
     delOrder() {
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/admin/order/${this.tempOrder.id}`;
       this.isLoading = true;
       this.$http.delete(url).then((response) => {
-        console.log(response);
+        this.toastMessagesMixin(response, '刪除訂單');
         const delComponent = this.$refs.delModal;
         delComponent.hideModal();
         this.getOrders(this.currentPage);

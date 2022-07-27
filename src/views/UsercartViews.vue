@@ -1,4 +1,5 @@
 <template>
+  <VLoading :active="isLoading" />
   <main class="my-4">
     <hr>
     <div class="container">
@@ -28,141 +29,37 @@
       </div>
       <div class="row">
         <div class="col-lg-8">
-          <div class="mb-3 fs-5"><strong>已購買 5 件</strong></div>
-          <div class="row row-cols-2">
+          <div class="mb-3 fs-5" v-if="carts.carts">
+            <strong>已購買 {{ carts.carts.length }} 件</strong>
+          </div>
+          <div class="row row-cols-2" v-for="item in carts.carts" :key="item.id">
             <div class="col-3 align-items-center">
-              <img src="http://www.bgleisure.com/archive/image/product2/images/1550895756.jpg" alt="星杯物語" class="img-fluid cartImg-size">
+              <img :src="item.product.imageUrl" :alt="item.product.title"
+              class="img-fluid cartImg-size">
             </div>
-            <div class="col">
+            <div class="col-9 mb-3">
               <div class="row">
-                <div class="col-lg-5">
-                  星杯物語
+                <div class="col-5">
+                  {{ item.product.title }}
                 </div>
-                <div class="col-lg-7">
+                <div class="col-7">
                   <div class="mb-3 text-end">
-                    <button type="button" class="btn btn-outline-danger">刪除</button>
+                    <button type="button" class="btn btn-outline-danger"
+                    @click="delCart(item.id)">刪除</button>
                   </div>
                   <div class="mb-3">
                     <div class="input-group">
-                      <input type="number" min="1" id="Unit" class="form-control text-center">
+                      <input type="number" min="1" id="Unit"
+                      class="form-control text-center" v-model="item.qty"
+                      @change="updateCart(item)">
                       <label for="Unit" class="input-group-text">盒</label>
                     </div>
                   </div>
                   <div class="text-end">
                     <p class="fs-5">
-                      <strong>小計 <i class="bi bi-currency-dollar"></i>1,280</strong>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row row-cols-2">
-            <div class="col-3 align-items-center">
-              <img src="http://www.bgleisure.com/archive/image/product2/images/1550895756.jpg" alt="星杯物語" class="img-fluid cartImg-size">
-            </div>
-            <div class="col">
-              <div class="row">
-                <div class="col-lg-5">
-                  星杯物語
-                </div>
-                <div class="col-lg-7">
-                  <div class="mb-3 text-end">
-                    <button type="button" class="btn btn-outline-danger">刪除</button>
-                  </div>
-                  <div class="mb-3">
-                    <div class="input-group">
-                      <input type="number" min="1" id="Unit1" class="form-control text-center">
-                      <label for="Unit1" class="input-group-text">盒</label>
-                    </div>
-                  </div>
-                  <div class="text-end">
-                    <p class="fs-5">
-                      <strong>小計 <i class="bi bi-currency-dollar"></i>1,280</strong>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row row-cols-2">
-            <div class="col-3 align-items-center">
-              <img src="http://www.bgleisure.com/archive/image/product2/images/1550895756.jpg" alt="星杯物語" class="img-fluid cartImg-size">
-            </div>
-            <div class="col">
-              <div class="row">
-                <div class="col-lg-5">
-                  星杯物語
-                </div>
-                <div class="col-lg-7">
-                  <div class="mb-3 text-end">
-                    <button type="button" class="btn btn-outline-danger">刪除</button>
-                  </div>
-                  <div class="mb-3">
-                    <div class="input-group">
-                      <input type="number" min="1" id="Unit2" class="form-control text-center">
-                      <label for="Unit2" class="input-group-text">盒</label>
-                    </div>
-                  </div>
-                  <div class="text-end">
-                    <p class="fs-5">
-                      <strong>小計 <i class="bi bi-currency-dollar"></i>1,280</strong>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row row-cols-2">
-            <div class="col-3 align-items-center">
-              <img src="http://www.bgleisure.com/archive/image/product2/images/1550895756.jpg" alt="星杯物語" class="img-fluid cartImg-size">
-            </div>
-            <div class="col">
-              <div class="row">
-                <div class="col-lg-5">
-                  星杯物語
-                </div>
-                <div class="col-lg-7">
-                  <div class="mb-3 text-end">
-                    <button type="button" class="btn btn-outline-danger">刪除</button>
-                  </div>
-                  <div class="mb-3">
-                    <div class="input-group">
-                      <input type="number" min="1" id="Unit3" class="form-control text-center">
-                      <label for="Unit3" class="input-group-text">盒</label>
-                    </div>
-                  </div>
-                  <div class="text-end">
-                    <p class="fs-5">
-                      <strong>小計 <i class="bi bi-currency-dollar"></i>1,280</strong>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row row-cols-2">
-            <div class="col-3 align-items-center">
-              <img src="http://www.bgleisure.com/archive/image/product2/images/1550895756.jpg" alt="星杯物語" class="img-fluid cartImg-size">
-            </div>
-            <div class="col">
-              <div class="row">
-                <div class="col-lg-5">
-                  星杯物語
-                </div>
-                <div class="col-lg-7">
-                  <div class="mb-3 text-end">
-                    <button type="button" class="btn btn-outline-danger">刪除</button>
-                  </div>
-                  <div class="mb-3">
-                    <div class="input-group">
-                      <input type="number" min="1" id="Unit4" class="form-control text-center">
-                      <label for="Unit4" class="input-group-text">盒</label>
-                    </div>
-                  </div>
-                  <div class="text-end">
-                    <p class="fs-5">
-                      <strong>小計 <i class="bi bi-currency-dollar"></i>1,280</strong>
+                      <strong>小計 <i class="bi bi-currency-dollar"></i>
+                        {{ carts.final_total }}
+                      </strong>
                     </p>
                   </div>
                 </div>
@@ -177,11 +74,35 @@
           <div class="row mb-5">
             <div class="col-6 fs-4"><strong>商品合計</strong></div>
             <div class="col-6 text-end fs-4">
-              <strong><i class="bi bi-currency-dollar"></i>1,280</strong>
+              <strong v-if="carts.total === carts.final_total">
+                <i class="bi bi-currency-dollar"></i>{{ carts.total }}
+              </strong>
+              <div v-if="carts.total > carts.final_total">
+                <p>
+                  <del class="text-muted">
+                    <i class="bi bi-currency-dollar"></i>{{ carts.total }}
+                  </del>
+                </p>
+                <p>
+                  <strong><i class="bi bi-currency-dollar"></i>{{ carts.final_total }}</strong>
+                </p>
+              </div>
             </div>
           </div>
+          <div class="mb-3 py-2 bg-categoryTitle text-center text-white fs-5">
+            <strong>優惠卷</strong>
+          </div>
+          <div class="row mb-5">
+            <div class="input-group mb-3">
+              <label for="inputCoupon" class="input-group-text"><strong>優惠碼</strong></label>
+              <input type="text" id="inputCoupon" class="form-control" v-model="code">
+              <button type="button" class="btn btn-outline-secondary"
+              @click.prevent="coupon">兌換</button>
+            </div>
+            <div class="fs-5 text-end text-muted">現在輸入<strong>summer9487</strong>即可享有25%的優惠</div>
+          </div>
           <div class="text-center">
-            <router-link class="btn btn-secondary" to="cartform">前往結帳</router-link>
+            <router-link class="btn btn-secondary" :to="{ name: 'cartform'}">前往結帳</router-link>
           </div>
         </div>
       </div>
@@ -191,20 +112,64 @@
 
 <script>
 export default {
+  data() {
+    return {
+      carts: {},
+      code: '',
+      isLoading: false,
+    };
+  },
+  inject: ['emitter', 'toastMessagesMixin'],
   methods: {
-    data() {
-      return {
-        product: [],
-      };
-    },
     getCarts() {
+      // 取得購物車
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`;
+      this.isLoading = true;
       this.$http.get(url).then((response) => {
-        console.log(response);
         this.isLoading = false;
         if (response.data.success) {
-          this.product = response.data.product;
+          this.carts = response.data.data;
         }
+      });
+    },
+    delCart(id) {
+      // 刪除購物車商品
+      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart/${id}`;
+      this.isLoading = true;
+      this.$http.delete(url).then((response) => {
+        if (response.data.success) {
+          this.toastMessagesMixin(response, '刪除購物車項目');
+          this.emitter.emit('update-cart');
+          this.getCarts();
+        }
+      });
+    },
+    updateCart(product) {
+      // 更新購物車
+      const cart = {
+        product_id: product.id,
+        qty: product.qty,
+      };
+      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart/${product.id}`;
+      this.isLoading = true;
+      this.$http.put(url, { data: cart }).then((response) => {
+        if (response.data.success) {
+          this.toastMessagesMixin(response, '更新購物車項目');
+          this.getCarts();
+        }
+      });
+    },
+    coupon() {
+      // 套用優惠卷
+      const code = {
+        code: this.code,
+      };
+      const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/coupon`;
+      this.isLoading = true;
+      this.$http.post(url, { data: code }).then((response) => {
+        this.isLoading = false;
+        this.toastMessagesMixin(response, '優惠卷使用');
+        this.getCarts();
       });
     },
   },

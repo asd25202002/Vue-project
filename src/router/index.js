@@ -32,7 +32,7 @@ const routes = [
         component: () => import('../views/UsercartformViews.vue'),
       },
       {
-        path: 'cartcheck',
+        path: 'cartcheck/:id',
         name: 'cartcheck',
         component: () => import('../views/UsercartcheckViews.vue'),
       },
