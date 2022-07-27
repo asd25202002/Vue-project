@@ -18,16 +18,16 @@
 
 ## 使用技術
 
-Vue Cli 開發 Vue.js 網頁
-ESlint(Standard) 統一撰寫風格
-Bootstrap 5 網頁版面設計美化
++ Vue Cli 開發 Vue.js 網頁
++ ESlint(Standard) 統一撰寫風格
++ Bootstrap 5 網頁版面設計美化
 
 ## 使用套件
 
-Vue-axios 串接 API
-Vee-validate 表單驗證
-Vue-loading-overlay 網頁載入視覺效果
-Mitt 跨元件傳遞資料
++ Vue-axios 串接 API
++ Vee-validate 表單驗證
++ Vue-loading-overlay 網頁載入視覺效果
++ Mitt 跨元件傳遞資料
 
 ## 使用及參考
 
