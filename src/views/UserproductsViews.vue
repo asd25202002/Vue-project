@@ -21,32 +21,42 @@
             <strong>從遊戲人數找查</strong>
           </div>
           <ul class="px-0 text-start list-unstyled">
-            <li class="mb-2 py-2 categoryMeun__item--hover">
-              <a class="d-block link-dark text-decoration-none" href="#"
+            <li>
+              <a class="py-2 d-block link-dark text-decoration-none categoryMeun__item--hover"
+              :class="{ 'categoryMeun__item--active': max === 3 && parseInt(islink) }"
+              href="#"
               @click.prevent="gotoproducts(1, 3)">
                 上限 3 人
               </a>
             </li>
-            <li class="mb-2 py-2 categoryMeun__item--hover">
-              <a class="d-block link-dark text-decoration-none" href="#"
+            <li>
+              <a class="py-2 d-block link-dark text-decoration-none categoryMeun__item--hover"
+              :class="{ 'categoryMeun__item--active': max === 4 && parseInt(islink) }"
+              href="#"
               @click.prevent="gotoproducts(1, 4)">
                 上限 4 人
               </a>
             </li>
-            <li class="mb-2 py-2 categoryMeun__item--hover">
-              <a class="d-block link-dark text-decoration-none" href="#"
+            <li>
+              <a class="py-2 d-block link-dark text-decoration-none categoryMeun__item--hover"
+              :class="{ 'categoryMeun__item--active': max === 6 && parseInt(islink) }"
+              href="#"
               @click.prevent="gotoproducts(5, 6)">
                 上限 5~6 人
               </a>
             </li>
-            <li class="mb-2 py-2 categoryMeun__item--hover">
-              <a class="d-block link-dark text-decoration-none" href="#"
+            <li>
+              <a class="py-2 d-block link-dark text-decoration-none categoryMeun__item--hover"
+              :class="{ 'categoryMeun__item--active': max === 10 && parseInt(islink) }"
+              href="#"
               @click.prevent="gotoproducts(7, 10)">
                 上限 7~10 人
               </a>
             </li>
-            <li class="mb-2 py-2 categoryMeun__item--hover">
-              <a class="d-block link-dark text-decoration-none" href="#"
+            <li>
+              <a class="py-2 d-block link-dark text-decoration-none categoryMeun__item--hover"
+              :class="{ 'categoryMeun__item--active': max === 20 && parseInt(islink) }"
+              href="#"
               @click.prevent="gotoproducts(10, 20)">
                 超過 10 人以上
               </a>
@@ -288,13 +298,7 @@ export default {
     gotoproducts(islink, maximum) {
       // 跳轉產品類型頁面
       this.islink = islink;
-      this.$router.push({
-        name: 'userproducts',
-        params: {
-          link: islink,
-          max: maximum,
-        },
-      });
+      this.max = maximum;
     },
     gotoProduct(productID) {
       // 跳轉產品頁面
@@ -310,8 +314,8 @@ export default {
     // 收尋
     filterProducts() {
       if (parseInt(this.islink, 10)) {
-        return this.products.filter((product) => parseInt(this.islink, 10) < product.unit
-        && product.unit < parseInt(this.max, 10));
+        return this.products.filter((product) => parseInt(this.islink, 10) <= product.unit
+        && product.unit <= parseInt(this.max, 10));
       }
       return this.products.filter((product) => {
         const response = product.category.match(this.islink);
@@ -322,7 +326,7 @@ export default {
   created() {
     this.getProducts();
     this.islink = this.$route.params.link;
-    this.max = this.$route.params.max;
+    this.max = parseInt(this.$route.params.max, 10);
   },
 };
 </script>
