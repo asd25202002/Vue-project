@@ -31,10 +31,11 @@
 
 ## 使用及參考
 
-### API 提供 <br>
-<a href="https://github.com/hexschool/vue3-course-api-wiki/wiki">hexshool-vue3-course-api<a> <br>
-網頁資料來源 <br>
-<a href="http://www.bgleisure.com/index.php?lang=tw">http://www.bgleisure.com/index.php?lang=tw<a> <br>
-圖片來源 <br>
-<a href="http://www.bgleisure.com/index.php?lang=tw">bgleisure<a> <br>
-<a href="https://unsplash.com/">unsplash<a>
+### API 提供
++ <a href="https://github.com/hexschool/vue3-course-api-wiki/wiki">hexshool-vue3-course-api<a>
+  
+### 網頁資料來源
++ <a href="http://www.bgleisure.com/index.php?lang=tw">http://www.bgleisure.com/index.php?lang=tw<a>
+### 圖片來源
++ <a href="http://www.bgleisure.com/index.php?lang=tw">bgleisure<a>
++ <a href="https://unsplash.com/">unsplash<a>
