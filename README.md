@@ -32,9 +32,9 @@
 ## 使用及參考
 
 ### API 提供
-<a href="https://github.com/hexschool/vue3-course-api-wiki/wiki">hexshool-vue3-course-api<a>
+<a href="https://github.com/hexschool/vue3-course-api-wiki/wiki">hexshool-vue3-course-api<a> <br>
 網頁資料來源
-<a href="http://www.bgleisure.com/index.php?lang=tw">http://www.bgleisure.com/index.php?lang=tw<a>
+<a href="http://www.bgleisure.com/index.php?lang=tw">http://www.bgleisure.com/index.php?lang=tw<a> <br>
 圖片來源
 <a href="http://www.bgleisure.com/index.php?lang=tw">bgleisure<a>
 <a href="https://unsplash.com/">unsplash<a>
