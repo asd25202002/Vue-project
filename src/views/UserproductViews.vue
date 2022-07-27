@@ -27,6 +27,11 @@
               <i class="bi bi-cart"></i>
               加入購物車
             </button>
+            <button type="button" class="btn btn-outline-danger"
+            @click.prevent="toggleFavorite(product)">
+              <i class="bi bi-heart"></i>
+              加入願望清單
+            </button>
           </div>
         </div>
       </div>
@@ -84,12 +89,15 @@
 </template>
 
 <script>
+import handleFavorite from '@/methods/favorite';
+
 export default {
   data() {
     return {
       product: {},
       products: [],
       page: '產品描述',
+      myFavorite: handleFavorite.getFavorite() || [],
     };
   },
   inject: ['emitter', 'toastMessagesMixin'],
@@ -140,6 +148,27 @@ export default {
         },
       });
       this.getProduct(productID);
+    },
+    toggleFavorite(item) {
+      if (this.myFavorite.includes(item.id)) {
+        this.myFavorite.splice(this.myFavorite.indexOf(item.id), 1);
+        this.toastMessagesMixin({
+          data: {
+            success: true,
+            message: `已將 ${item.title} 移除收藏`,
+          },
+        }, '移除收藏');
+      } else {
+        this.myFavorite.push(item.id);
+        this.toastMessagesMixin({
+          data: {
+            success: true,
+            message: `已將 ${item.title} 加入收藏`,
+          },
+        }, '加入收藏');
+      }
+      handleFavorite.storeFavorite(this.myFavorite);
+      this.emitter.emit('update-favorite');
     },
   },
   computed: {

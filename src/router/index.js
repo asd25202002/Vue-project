@@ -27,6 +27,11 @@ const routes = [
         component: () => import('../views/UsercartViews.vue'),
       },
       {
+        path: 'favonrite',
+        name: 'favonrite',
+        component: () => import('../views/UserfavonriteViews.vue'),
+      },
+      {
         path: 'cartform',
         name: 'cartform',
         component: () => import('../views/UsercartformViews.vue'),

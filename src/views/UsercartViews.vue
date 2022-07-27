@@ -27,9 +27,9 @@
           </li>
         </ul>
       </div>
-      <div class="row">
+      <div class="row" v-if="!carts">
         <div class="col-lg-8">
-          <div class="mb-3 fs-5" v-if="carts.carts">
+          <div class="mb-3 fs-5">
             <strong>已購買 {{ carts.carts.length }} 件</strong>
           </div>
           <div class="row row-cols-2" v-for="item in carts.carts" :key="item.id">
@@ -106,6 +106,7 @@
           </div>
         </div>
       </div>
+      <div class="fs-5 text-muted" v-else>您還沒有購買商品</div>
     </div>
   </main>
 </template>

@@ -33,11 +33,20 @@
       <div class="ms-auto mt-2 mt-md-0 align-items-center">
         <router-link
         class="btn border-0 position-relative p-0 me-4 me-lg-5 icon--hover"
-        to="/userboard/cart">
+        :to="{ name: 'cart' }">
           <i class="bi bi-cart" style="font-size: 1.5rem;"></i>
           <span class="position-absolute start-100 translate-middle
           badge rounded-pill bg-secondary navbarIconBtn" v-if="carts.carts">
             {{ carts.carts.length ? carts.carts.length : '' }}
+          </span>
+        </router-link>
+        <router-link
+        class="btn border-0 position-relative p-0 me-4 me-lg-5 icon--hover"
+        :to="{ name: 'favonrite' }">
+          <i class="bi bi-heart" style="font-size: 1.5rem;"></i>
+          <span class="position-absolute start-100 translate-middle
+          badge rounded-pill bg-secondary navbarIconBtn" v-if="myFavorite.length">
+            {{ myFavorite.length ? myFavorite.length : '' }}
           </span>
         </router-link>
       </div>
@@ -47,12 +56,14 @@
 
 <script>
 import offcanvasMixin from '@/mixins/offcanvasMixin';
+import handleFavorite from '@/methods/favorite';
 
 export default {
   data() {
     return {
       offcanvas: {},
       carts: [],
+      myFavorite: handleFavorite.getFavorite() || [],
     };
   },
   inject: ['emitter'],
@@ -63,10 +74,14 @@ export default {
         this.carts = response.data.data;
       });
     },
+    getFavorite() {
+      this.myFavorite = handleFavorite.getFavorite();
+    },
   },
   mounted() {
     this.getCart();
     this.emitter.on('update-cart', this.getCart);
+    this.emitter.on('update-favorite', this.getFavorite);
   },
   mixins: [offcanvasMixin],
 };
