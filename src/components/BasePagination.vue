@@ -3,7 +3,8 @@
     <nav aria-label="分頁列">
       <ul class="pagination justify-content-center">
         <li class="page-item" :class="{ 'disabled': pages.has_pre === false }">
-          <a class="page-link link-dark" href="#" aria-label="上一頁">
+          <a class="page-link link-dark" href="#" aria-label="上一頁"
+          @click.prevent="updatePage(pages.current_page - 1)">
             <span aria-hidden="true">&laquo;</span>
           </a>
         </li>
@@ -14,7 +15,8 @@
           </a>
         </li>
         <li class="page-item" :class="{ 'disabled': pages.has_next === false }">
-          <a class="page-link link-dark" href="#" aria-label="下一頁">
+          <a class="page-link link-dark" href="#" aria-label="下一頁"
+          @click.prevent="updatePage(pages.current_page + 1)">
             <span aria-hidden="true">&raquo;</span>
           </a>
         </li>

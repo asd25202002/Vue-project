@@ -238,82 +238,82 @@
           <ul class="row g-4 p-0 align-items-center text-center list-unstyled">
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('bgleisure')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/1482473490.png" alt="勃根地" class="img-fluid">
+                <img src="../assets/img/bgleisure.png" alt="勃根地" class="img-fluid">
               </a>
             </li>
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('SwanPanasia')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/03.gif" alt="新天鵝堡" class="img-fluid">
+                <img src="../assets/img/SwanPanasia.gif" alt="新天鵝堡" class="img-fluid">
               </a>
             </li>
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('gokids')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/1510149349.jpg" alt="玩樂小子" class="img-fluid">
+                <img src="../assets/img/gokids.jpg" alt="玩樂小子" class="img-fluid">
               </a>
             </li>
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('Kanga')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/KANGA_GAMES.jpg" alt="袋鼠" class="img-fluid">
+                <img src="../assets/img/Kanga.jpg" alt="袋鼠" class="img-fluid">
               </a>
             </li>
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('sunnyboard')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/1492151021.jpg" alt="陽光" class="img-fluid">
+                <img src="../assets/img/sunnyboard.jpg" alt="陽光" class="img-fluid">
               </a>
             </li>
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('hsinyi')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/1512130606.png" alt="上誼" class="img-fluid">
+                <img src="../assets/img/hsinyi.png" alt="上誼" class="img-fluid">
               </a>
             </li>
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('Hasbro')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/Hasbro.png" alt="孩之寶" class="img-fluid">
+                <img src="../assets/img/Hasbro.png" alt="孩之寶" class="img-fluid">
               </a>
             </li>
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('gege')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/1482147753.jpg" alt="哿哿屋" class="img-fluid">
+                <img src="../assets/img/gege.jpg" alt="哿哿屋" class="img-fluid">
               </a>
             </li>
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('bghut')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/1487997575.jpg" alt="卡牌屋" class="img-fluid">
+                <img src="../assets/img/bghut.jpg" alt="卡牌屋" class="img-fluid">
               </a>
             </li>
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('emperors4')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/1507804653.jpg" alt="愛樂事" class="img-fluid">
+                <img src="../assets/img/emperors4.jpg" alt="愛樂事" class="img-fluid">
               </a>
             </li>
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('SharpPoint')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/1493791279.png" alt="尖端出版社" class="img-fluid">
+                <img src="../assets/img/SharpPoint.png" alt="尖端出版社" class="img-fluid">
               </a>
             </li>
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('Taiwan')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/1506931657.gif" alt="台灣設計專區" class="img-fluid">
+                <img src="../assets/img/Taiwan.gif" alt="台灣設計專區" class="img-fluid">
               </a>
             </li>
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('moaideas')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/1523879275.png" alt="摩埃創意工作室" class="img-fluid">
+                <img src="../assets/img/moaideas.png" alt="摩埃創意工作室" class="img-fluid">
               </a>
             </li>
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('bigfungame')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/1508402832.jpg" alt="Big Fun、TWO PLUS、玩坊" class="img-fluid">
+                <img src="../assets/img/bigfungame.jpg" alt="Big Fun、TWO PLUS、玩坊" class="img-fluid">
               </a>
             </li>
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('Chinese')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/1506932072.png" alt="中國、港澳代理" class="img-fluid">
+                <img src="../assets/img/Chinese.png" alt="中國、港澳代理" class="img-fluid">
               </a>
             </li>
             <li class="col-md-6 col-lg-3 categoryImgMenu__item--hover">
               <a class="text-decoration-none" href="#" @click.prevent="gotoproducts('English')">
-                <img src="http://www.bgleisure.com/archive/image/product2/images/layoutlist/00.gif" alt="英文/其他國家版本遊戲" class="img-fluid">
+                <img src="../assets/img/English.gif" alt="英文/其他國家版本遊戲" class="img-fluid">
               </a>
             </li>
           </ul>

@@ -19,7 +19,7 @@
           <ul class="navbar-nav">
           <li class="nav-item">
             <router-link class="nav-link link-white"
-            :to="{ name: dashproduct}">產品</router-link>
+            :to="{ name: 'dashproduct'}">產品</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link link-white" :to="{ name: 'order'}">訂單</router-link>
