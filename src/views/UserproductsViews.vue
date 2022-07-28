@@ -241,9 +241,35 @@
         </div>
         <div class="col col-lg-9">
           <div class="mb-3 fs-3 text-center"><strong>產品一覽</strong></div>
-          <ul class="row g-4 p-0 list-unstyled">
+          <ul class="row g-4 p-0 list-unstyled" v-if="!search">
             <li class="col-md-6 col-lg-3 border-0"
             v-for="product in filterProducts" :key="product.id">
+              <div class="card border-0 h-100">
+                <img :src="product.imageUrl" alt="product.title"
+                class="img-fluid mx-auto productImg-size">
+                <div class="card-body text-center">
+                  <h5 class="card-title text-truncate">{{ product.title }}</h5>
+                  <p class="card-text">
+                    遊戲人數：{{ product.unit }} 人
+                  </p>
+                  <p class="card-text">
+                    發行商：{{ product.category }}
+                  </p>
+                  <p class="card-text">
+                    NT<i class="bi bi-currency-dollar"></i>{{ $filters.currency(product.price) }}
+                  </p>
+                  <a type="button"
+                  class="btn btn-secondary stretched-link" href="#"
+                  @click.prevent="gotoProduct(product.id)">
+                    前往
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="row g-4 p-0 list-unstyled" v-if="search">
+            <li class="col-md-6 col-lg-3 border-0"
+            v-for="product in filterSearch" :key="product.id">
               <div class="card border-0 h-100">
                 <img :src="product.imageUrl" alt="product.title"
                 class="img-fluid mx-auto productImg-size">
@@ -326,11 +352,18 @@ export default {
         return response;
       });
     },
+    filterSearch() {
+      return this.products.filter((product) => {
+        const response = product.title.match(this.search);
+        return response;
+      });
+    },
   },
   created() {
     this.getProducts();
     this.islink = this.$route.params.link;
     this.max = parseInt(this.$route.params.max, 10);
+    this.search = this.$route.params.search;
   },
 };
 </script>

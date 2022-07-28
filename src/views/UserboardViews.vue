@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed-top">
+  <header class="sticky-top">
     <UserNavbar />
   </header>
   <router-view/>
