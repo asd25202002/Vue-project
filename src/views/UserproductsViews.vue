@@ -9,13 +9,16 @@
             <strong>產品收尋</strong>
           </label>
           <div class="position-relative mb-3">
-            <input type="text" id="inputProductName" class="form-control rounded-pill"
-            placeholder="請輸入產品名稱"
-            aria-label="產品收尋框">
-            <button type="button"
-            class="position-absolute top-50 translate-middle border-0 searchBtn">
-              <i class="bi bi-search"></i>
-            </button>
+            <form>
+              <input type="text" id="inputProductName" class="form-control rounded-pill"
+              placeholder="請輸入產品名稱"
+              aria-label="產品收尋框"
+              v-model="search">
+              <button type="sumbit"
+              class="position-absolute top-50 translate-middle border-0 searchBtn">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
           </div>
           <div class="py-2 bg-categoryTitle text-white">
             <strong>從遊戲人數找查</strong>
@@ -277,6 +280,7 @@ export default {
     return {
       islink: '',
       max: 0,
+      search: '',
       products: [],
       pagination: {},
       isLoading: false,

@@ -1,5 +1,7 @@
 <template>
-  <UserNavbar />
+  <header class="fixed-top">
+    <UserNavbar />
+  </header>
   <router-view/>
   <UserFooter />
   <ToastMessages />
